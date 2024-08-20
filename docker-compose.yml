@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  database:
+    restart: always
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: '12345'
+    ports:
+      - 32426:5432
+
+volumes:
+  data:
